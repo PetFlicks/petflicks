@@ -1,5 +1,22 @@
 
-{% include 'navbar.html' %}
+{% extends 'main.html' %}
+
+{% block content %}
+
+
 <h1>
     Home Page in templates
 </h1>
+<div>
+    <div>
+        {% for post in posts %}
+<div>
+        <h5>{{ post.id}} -- <a href="{% url 'post' post.id %}"> {{post.name}}</a></h5>
+</div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock content %}
