@@ -6,5 +6,5 @@ urlpatterns = [
 
    
     path('', views.home, name ="home"),
-    path('topic/', views.topic, name ="topic")
+    path('post/<str:pk>', views.topic, name ="post")
 ]
